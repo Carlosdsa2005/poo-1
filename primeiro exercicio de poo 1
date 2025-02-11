@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner scanner = new Scanner(System.in);
+	      
+	      
+	    System.out.println("*********************");
+	    System.out.println("MENU");
+	    System.out.println("*********************");
+		System.out.println("[1] adição");
+		System.out.println("[2] subtração");
+		System.out.println("[3] mult");
+		System.out.println("[4] divisão");
+		System.out.println("[0] sair");
+		
+	    System.out.println("escolha sua opção");
+	    int numero = scanner.nextInt();
+	
+
+	    System.out.println(numero);
+	    
+	    if (numero >= 5 || numero < 0  )
+	    {
+	        System.out.println("erro");
+
+	    }
+	       
