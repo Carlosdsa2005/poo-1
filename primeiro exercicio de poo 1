@@ -5,8 +5,12 @@ public class Main
 	public static void main(String[] args) 
 	{
 	    Scanner scanner = new Scanner(System.in);
-	      
-	      
+	   
+	   int numero ;
+	   do
+	   {
+	        
+	    
 	    System.out.println("*********************");
 	    System.out.println("\tMENU");
 	    System.out.println("*********************");
@@ -17,18 +21,14 @@ public class Main
 		System.out.println("[0] sair");
 		
 	    System.out.println("escolha sua opção");
-	    int numero = scanner.nextInt();
-	
-	     if   (numero > 4 || numero < 0)
-	   {
-	        System.out.println("opção errada");
-	   }
+	    numero = scanner.nextInt();
+	    
 	          
-	   int n1;
-	   int n2;
-	   int total;
-	   switch (numero)
-	   {
+	        int n1;
+	        int n2;
+	        int total;
+	    switch (numero)
+	    {
 	       case 1:
 	            System.out.println("digite o primeiro numero da adicão: ");
 	            n1 = scanner.nextInt();
@@ -38,6 +38,7 @@ public class Main
 	            
 	            total = n1 + n2;
 	            System.out.println("o resultado da soma é " + total);
+	            System.out.println();
 	            break;
 	       
 	       
@@ -50,6 +51,7 @@ public class Main
 	            
 	            total = n1 - n2;
 	            System.out.println("o resultado da subtracão é " + total);
+	            System.out.println();
 	            break;
 	            
 	            
@@ -62,26 +64,27 @@ public class Main
 	            
 	            total = n1 * n2;
 	            System.out.println("o resultado da multiplicação é " + total);
+	            System.out.println();
 	            break;
 	            
 	       case 4:
-	             System.out.println("digite o primeiro numero da divisão: ");
+	            System.out.println("digite o primeiro numero da divisão: ");
 	            n1 = scanner.nextInt();
 	            
 	            System.out.println("digite o segundo numero da divisão: ");
 	            n2 = scanner.nextInt();
 	            
 	            total = n1 / n2;
-	            System.out.println("o resultado da divisão é " + total);
+	            System.out.println("o resultado da divisão é \n" + total);
+	            System.out.println();
 	            break;
 	            
-	       case 0:
-	            System.out.println("adeus");
-	            break;
-	            
-	      
-	       
-	   }
+           default:
+                System.out.println("opção invalida\n");
+
+	       }
+	        
+	   } while (numero != 0);
 	            
 	}
 }
