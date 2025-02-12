@@ -27,6 +27,7 @@ public class Main
 	        int n1;
 	        int n2;
 	        int total;
+
 	    switch (numero)
 	    {
 	       case 1:
@@ -79,8 +80,13 @@ public class Main
 	            System.out.println();
 	            break;
 	            
-           default:
-                System.out.println("opção invalida\n");
+	       case 0:
+	            System.out.println("adeus \n");
+	            break;
+	            
+               default:
+                    System.out.println("opção invalida\n");
+                    break;
 
 	       }
 	        
