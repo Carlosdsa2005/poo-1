@@ -8,7 +8,7 @@ public class Main
 	      
 	      
 	    System.out.println("*********************");
-	    System.out.println("MENU");
+	    System.out.println("        MENU");
 	    System.out.println("*********************");
 		System.out.println("[1] adição");
 		System.out.println("[2] subtração");
@@ -19,12 +19,69 @@ public class Main
 	    System.out.println("escolha sua opção");
 	    int numero = scanner.nextInt();
 	
-
-	    System.out.println(numero);
-	    
-	    if (numero >= 5 || numero < 0  )
-	    {
-	        System.out.println("erro");
-
-	    }
+	     if   (numero > 4 || numero < 0)
+	   {
+	        System.out.println("opção errada");
+	   }
+	          
+	   int n1;
+	   int n2;
+	   int total;
+	   switch (numero)
+	   {
+	       case 1:
+	            System.out.println("digite o primeiro numero da adicão: ");
+	            n1 = scanner.nextInt();
+	            
+	            System.out.println("digite o segundo numero da adicão: ");
+	            n2 = scanner.nextInt();
+	            
+	            total = n1 + n2;
+	            System.out.println("o resultado da soma é " + total);
+	            break;
 	       
+	       
+	       case 2:
+	            System.out.println("digite o primeiro numero da subtracão: ");
+	            n1 = scanner.nextInt();
+	            
+	            System.out.println("digite o segundo numero da subtracão: ");
+	            n2 = scanner.nextInt();
+	            
+	            total = n1 - n2;
+	            System.out.println("o resultado da subtracão é " + total);
+	            break;
+	            
+	            
+	       case 3: 
+	            System.out.println("digite o primeiro numero da multiplicação: ");
+	            n1 = scanner.nextInt();
+	            
+	            System.out.println("digite o segundo numero da multiplicação: ");
+	            n2 = scanner.nextInt();
+	            
+	            total = n1 * n2;
+	            System.out.println("o resultado da multiplicação é " + total);
+	            break;
+	            
+	       case 4:
+	             System.out.println("digite o primeiro numero da divisão: ");
+	            n1 = scanner.nextInt();
+	            
+	            System.out.println("digite o segundo numero da divisão: ");
+	            n2 = scanner.nextInt();
+	            
+	            total = n1 / n2;
+	            System.out.println("o resultado da divisão é " + total);
+	            break;
+	            
+	       case 0:
+	            System.out.println("adeus");
+	            break;
+	            
+	      
+	       
+	   }
+	            
+	}
+}
