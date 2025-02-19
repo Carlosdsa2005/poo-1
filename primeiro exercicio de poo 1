@@ -26,71 +26,97 @@ public class Main
 	          
 	        int n1;
 	        int n2;
-	        int total;
-
+	        int total;  
+	        
+        if (numero >= 1 && numero < 5)
+        {
+            System.out.println("digite o primeiro numero: ");
+	        n1 = scanner.nextInt();
+	            
+	        System.out.println("digite o segundo numero: ");
+	        n2 = scanner.nextInt();
+	        
+	        
 	    switch (numero)
 	    {
-	       case 1:
-	            System.out.println("digite o primeiro numero da adicão: ");
-	            n1 = scanner.nextInt();
-	            
-	            System.out.println("digite o segundo numero da adicão: ");
-	            n2 = scanner.nextInt();
-	            
-	            total = n1 + n2;
-	            System.out.println("o resultado da soma é " + total);
-	            System.out.println();
+	        case 1:
+	            int soma = somar(n1,n2);
+	            System.out.println("o resultado da adição é " + soma);
 	            break;
 	       
-	       
-	       case 2:
-	            System.out.println("digite o primeiro numero da subtracão: ");
-	            n1 = scanner.nextInt();
+	        case 2:
 	            
-	            System.out.println("digite o segundo numero da subtracão: ");
-	            n2 = scanner.nextInt();
-	            
-	            total = n1 - n2;
-	            System.out.println("o resultado da subtracão é " + total);
-	            System.out.println();
+	            int subtracão = subtrair(n1,n2);
+	            System.out.println("o resultado da subtracão é " + subtracão);
 	            break;
 	            
+	        case 3: 
 	            
-	       case 3: 
-	            System.out.println("digite o primeiro numero da multiplicação: ");
-	            n1 = scanner.nextInt();
-	            
-	            System.out.println("digite o segundo numero da multiplicação: ");
-	            n2 = scanner.nextInt();
-	            
-	            total = n1 * n2;
-	            System.out.println("o resultado da multiplicação é " + total);
-	            System.out.println();
+                int multiplicação = multiplicar(n1,n2);
+	            System.out.println("o resultado da multiplicação é " + multiplicação);
 	            break;
 	            
-	       case 4:
-	            System.out.println("digite o primeiro numero da divisão: ");
-	            n1 = scanner.nextInt();
-	            
-	            System.out.println("digite o segundo numero da divisão: ");
-	            n2 = scanner.nextInt();
-	            
-	            total = n1 / n2;
-	            System.out.println("o resultado da divisão é \n" + total);
-	            System.out.println();
+	        case 4:
+	            int divisão = dividir(n1,n2);
+	            System.out.println("o resultado da divisão é " + divisão);
 	            break;
 	            
-	       case 0:
-	            System.out.println("adeus \n");
-	            break;
-	            
-               default:
-                    System.out.println("opção invalida\n");
-                    break;
+            default:
+                System.out.println("opção invalida\n");
+                break;
 
 	       }
-	        
+        }     
 	   } while (numero != 0);
+	    System.out.println("Adeus!");
 	            
 	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public static int somar(int x, int y) 
+	{
+	     return x + y;
+	}
+	    
+	public static int subtrair(int x, int y) 
+	{
+	    return x - y;
+	}
+	    
+	public static int multiplicar(int x, int y)
+	{
+	    return x * y;
+	}
+	    
+	public static int dividir(int x, int y) 
+	{
+	    return x / y;
+	}    
+
+	            
+	
 }
