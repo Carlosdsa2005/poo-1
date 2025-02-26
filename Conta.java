@@ -1,26 +1,26 @@
-package com.mycompany.banco;
+package banco;
 
 
 public class Conta {
-    private double saldo;
-    private double limite;
+    int numero;
+    String nome;
+    double saldo;
 
-    public Conta(double saldoInicial, double limite) {
-        this.saldo = saldoInicial;
-        this.limite = limite;
+    public Conta(int num, String nom, double saldoInicial) {
+        saldo = saldoInicial;
     }
 
-    public void depositar(double valor) {
+     void depositar(double valor) {
         if (valor > 0) {
-            saldo += valor;
+            saldo = saldo + valor;
             System.out.println("Depósito de R$ " + valor + " realizado com sucesso.");
         } else {
             System.out.println("Valor de depósito inválido.");
         }
     }
 
-    public void sacar(double valor) {
-        if (valor > 0 && valor <= saldo + limite) {
+     void sacar(double valor) {
+        if (valor > 0 && valor <= saldo) {
             saldo -= valor;
             System.out.println("Saque de R$ " + valor + " realizado com sucesso.");
         } else {
@@ -28,15 +28,10 @@ public class Conta {
         }
     }
 
-    public double getSaldo() {
-        return saldo;
+     double dados() {
+        return numero + nome+ saldo;
     }
 
-    public double getLimite() {
-        return limite;
-    }
 
-    public void setLimite(double limite) {
-        this.limite = limite;
-    }
 }
+
