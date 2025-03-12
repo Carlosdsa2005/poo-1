@@ -1,13 +1,20 @@
-package banco;
+package com.mycompany.mavenproject1;
+
+import java.util.Scanner;
 
 
 public class Conta {
-    int numero;
-    String nome;
+    int numero = 1;
     double saldo;
+    double limite = 1000.00;
+    
+    Scanner scanner = new Scanner(System.in);
 
-    public Conta(int num, String nom, double saldoInicial) {
-        saldo = saldoInicial;
+    public Conta( ) {
+        System.out.print("faca o deposito inicial: ");
+        saldo = scanner.nextInt();
+
+        
     }
 
      void depositar(double valor) {
@@ -20,7 +27,7 @@ public class Conta {
     }
 
      void sacar(double valor) {
-        if (valor > 0 && valor <= saldo) {
+        if (valor > 0 && valor <= saldo + limite) {
             saldo -= valor;
             System.out.println("Saque de R$ " + valor + " realizado com sucesso.");
         } else {
@@ -28,10 +35,17 @@ public class Conta {
         }
     }
 
-     double dados() {
-        return numero + nome+ saldo;
-    }
+     void dados(double num_conta){
+         if (num_conta == numero)
+         {
+             System.out.println(numero);
+             System.out.println(saldo);
+             System.out.println(limite);
+             System.out.println(Conta);
 
+
+         }
+             
+     }
 
 }
-
