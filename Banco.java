@@ -1,17 +1,17 @@
-package banco;
+package com.mycompany.mavenproject1;
 
 import java.util.Scanner;
 
-public class Banco {
-
+public class Mavenproject1 {
 
     public static void main(String[] args) {
-        Conta conta = new Conta(1, "carlos", 5000.00);
-
+    Conta conta = new Conta();
+    Cliente cliente = new Cliente("carlos","daniel","123456789-10");
         Scanner scanner = new Scanner(System.in);
         int opcao;
 
         do {
+
             System.out.println("\n--- Sistema Bancário ---");
             System.out.println("1 - Depósito");
             System.out.println("2 - Saque");
@@ -35,7 +35,9 @@ public class Banco {
                     break;
                     
                 case 3:
-                    System.out.println(conta.dados());
+                    System.out.print("digite o numero da conta: ");
+                    double dados = scanner.nextDouble();
+                    conta.dados(dados);
                     break;
                                         
                 case 4:
@@ -45,9 +47,5 @@ public class Banco {
                 default:
                     System.out.println("Opção inválida, tente novamente.");
             }
-        } while (opcao != 5);
-
-
-    }
-    
+        } while (opcao != 4);    }
 }
