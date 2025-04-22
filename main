@@ -1,0 +1,15 @@
+    public static void main(String[] args) {
+        Evento evento = new Evento("Tech Summit 2025");
+
+        Participante p1 = new Participante("Alice", "alice@email.com");
+        Participante p2 = new Participante("Bob", "bob@email.com");
+        Participante p3 = new Participante("Alice Clone", "alice@email.com"); // E-mail duplicado
+        
+        evento.setParticipantes(p1);
+        evento.setParticipantes(p2);
+
+        for (participantes.Entry<String, Participante> entry : participantesMap.entrySet()) {
+            // Aqui, entry.getValue() é o participante e entry.getKey() é o e-mail
+            System.out.println(entry.getValue());
+    }
+}
