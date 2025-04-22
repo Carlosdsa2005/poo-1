@@ -1,0 +1,25 @@
+package com.mycompany.mavenproject1;
+
+import java.util.HashSet;
+import java.util.Set;
+
+
+public class Evento {
+    private String nome;
+    private Set<Participante> participantes;
+
+    public Evento(String nome) {
+        this.nome = nome;
+        this.participantes = new HashSet<>();
+    }
+
+    public void setParticipantes(Participante participante) {
+        participantes.add(participante);
+    }
+    
+       public void print()
+    {
+        System.out.println(participantes);
+    }
+
+}
