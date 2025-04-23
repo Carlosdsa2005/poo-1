@@ -1,0 +1,21 @@
+    public static void main(String[] args) {
+        Evento evento1 = new Evento("Tech Summit 2025");
+
+        System.out.println("adicionando os participantes");
+        Participante p1 = new Participante("cintura de concreto", "concretonaldo@email.com");
+        Participante p2 = new Participante("mbappenis", "kilianpinto@email.com");
+        Participante p3 = new Participante("bob charlton", "cornoendrick@email.com");
+        
+        evento1.adicionarParticipantes(p1);
+        evento1.adicionarParticipantes(p2);
+        evento1.adicionarParticipantes(p3); 
+        evento1.adicionarParticipantes(p1);
+
+        evento1.print();
+        
+        evento1.remover(p3);
+        
+        evento1.print();
+
+    }
+}
