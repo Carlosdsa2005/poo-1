@@ -8,18 +8,44 @@ public class Evento {
     private String nome;
     private Set<Participante> participantes;
 
-    public Evento(String nome) {
+    public Evento(String nome) 
+    {
         this.nome = nome;
         this.participantes = new HashSet<>();
     }
 
-    public void setParticipantes(Participante participante) {
-        participantes.add(participante);
-    }
-    
-       public void print()
+    public void adicionarParticipantes(Participante participante) 
     {
-        System.out.println(participantes);
+        boolean retorno = participantes.add(participante);
+        if(retorno == true)
+        {
+                    
+        System.out.println("participante " + participante.getNome() + " adicionado");
+        }
+        else
+        {
+        System.out.println("");
+        System.out.println("removendo o participante");
+        System.out.println("participante " + participante.getNome() + " ja na lista");
+
+        }
+    }    
+    
+    public void print() {
+    System.out.println("");
+    System.out.println("printando o evento e os participantes");
+    System.out.println("Nome do evento: "+ nome);
+    System.out.println("");    
+    for (Participante p : participantes) {
+        System.out.println(p);
+    }
+}   
+    public void remover(Participante participante) {
+        participantes.remove(participante);
+        System.out.println("");
+        System.out.println("removendo o participante");
+        System.out.println("participante: "+ participante.getNome() + " removido");
+
     }
 
 }
