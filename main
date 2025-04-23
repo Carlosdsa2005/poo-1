@@ -1,15 +1,21 @@
     public static void main(String[] args) {
-        Evento evento = new Evento("Tech Summit 2025");
+        Evento evento1 = new Evento("Tech Summit 2025");
 
-        Participante p1 = new Participante("Alice", "alice@email.com");
-        Participante p2 = new Participante("Bob", "bob@email.com");
-        Participante p3 = new Participante("Alice Clone", "alice@email.com"); // E-mail duplicado
+        System.out.println("adicionando os participantes");
+        Participante p1 = new Participante("cintura de concreto", "concretonaldo@email.com");
+        Participante p2 = new Participante("mbappenis", "kilianpinto@email.com");
+        Participante p3 = new Participante("bob charlton", "cornoendrick@email.com");
         
-        evento.setParticipantes(p1);
-        evento.setParticipantes(p2);
+        evento1.adicionarParticipantes(p1);
+        evento1.adicionarParticipantes(p2);
+        evento1.adicionarParticipantes(p3); 
+        evento1.adicionarParticipantes(p1);
 
-        for (participantes.Entry<String, Participante> entry : participantesMap.entrySet()) {
-            // Aqui, entry.getValue() é o participante e entry.getKey() é o e-mail
-            System.out.println(entry.getValue());
+        evento1.print();
+        
+        evento1.remover(p3);
+        
+        evento1.print();
+
     }
 }
