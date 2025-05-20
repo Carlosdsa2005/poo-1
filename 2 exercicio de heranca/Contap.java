@@ -9,9 +9,9 @@ class Contap extends Conta {
 
     @Override
      public void sacar(double v){
-        if ((v + 15)< getSaldo()){
+        if ((v + 15) <= getSaldo()){
             setSaldo(getSaldo() - (v + 15));
-            System.err.println("novo saldo : " + getSaldo());
+            System.err.println("SAQUE FEITO ; novo saldo da conta poupanca: " + getSaldo());
         }
         else{
             System.err.println("saldo insuficente");
@@ -22,11 +22,11 @@ class Contap extends Conta {
     @Override
     public void depositar(double v){
         if( v > 0){
-             setSaldo(getSaldo() - v);
-             System.err.println("saldo insuficente");
+             setSaldo(getSaldo() + v); 
+             System.err.println("DEPOSITO REALIZADO ; novo saldo da conta poupanca : " + getSaldo());         
         }
         else {
-            System.err.println("novo saldo : " + getSaldo());
+           System.err.println("valor nao aceito");
 
         }
     }
@@ -34,8 +34,8 @@ class Contap extends Conta {
     
     @Override
     public void rendimento(){
-        setSaldo(getSaldo() + (getSaldo() * 0.5));
-        System.err.println("novo saldo : " + getSaldo());
+        setSaldo(getSaldo() + (getSaldo() * 0.05));
+        System.err.println("RENDIMENTO APLICADO; novo saldo da conta poupanca: " + getSaldo());
     }
     
 }
