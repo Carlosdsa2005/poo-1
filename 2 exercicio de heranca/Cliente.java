@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
-        String nome;
+                String nome;
         String cpf;
         public List<Conta> contas = new ArrayList<>();
         
@@ -27,9 +27,12 @@ public class Cliente {
     
     public void mostrarsaldo(){
         for(Conta conta : contas){
-        System.out.println( "Saldo: " + conta.getSaldo());
+        System.out.println( "Saldo da conta: " + conta.getSaldo());
         }
     }    
+    
+    
+    
     
     
     public String getNome() {
@@ -47,6 +50,16 @@ public class Cliente {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-        
+
+    public List<Conta> getContas() {
+        return contas;
+    }
+
+    public void setContas(List<Conta> contas) {
+        this.contas = contas;
+    }
+    
+    
+    
 
 }
